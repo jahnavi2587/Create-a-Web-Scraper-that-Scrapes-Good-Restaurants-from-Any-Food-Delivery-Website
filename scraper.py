@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import csv # Import the csv module
 
 # Open (or create) a CSV file with write permissions
-with open('Chicago_Michelin_Restaurants.csv', 'w', newline='') as file:
+with open('Michelin_Restaurants_USA.csv', 'w', newline='') as file:
     writer = csv.writer(file) # Create a csv writer object
     writer.writerow(["Name", "Distinction", "Cuisine"]) # Write the header row
 
