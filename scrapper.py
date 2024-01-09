@@ -45,6 +45,5 @@ with open('Chicago_Michelin_Restaurants.csv', 'w', newline='') as file:
                 distinction = " "
 
             cuisine = re.findall('[a-zA-Z]+', restaurant.find('div', class_='card__menu-footer--price pl-text').text)[0]
-            # Print the name, stars and cuisine
-            # print(name, distinction, cuisine)
+            # Save the name, distinction and cuisine
             writer.writerow([name, distinction, cuisine])
