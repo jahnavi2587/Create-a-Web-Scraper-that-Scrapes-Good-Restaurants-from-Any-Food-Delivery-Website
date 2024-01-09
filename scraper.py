@@ -9,9 +9,9 @@ with open('Chicago_Michelin_Restaurants.csv', 'w', newline='') as file:
     writer = csv.writer(file) # Create a csv writer object
     writer.writerow(["Name", "Distinction", "Cuisine"]) # Write the header row
 
-    for i in range(1, 9):
+    for i in range(1, 78):
         # The URL of the website you want to scrape
-        url = "https://guide.michelin.com/us/en/illinois/chicago/restaurants/page/" + str(i)
+        url = "https://guide.michelin.com/us/en/selection/united-states/restaurants/page/" + str(i)
 
         # Send a GET request to the website
 	# The code inside the 'try' block is executed
