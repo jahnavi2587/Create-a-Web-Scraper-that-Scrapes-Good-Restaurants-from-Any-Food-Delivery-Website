@@ -13,13 +13,13 @@ with open('Michelin_Restaurants_USA.csv', 'w', newline='') as file:
         # The URL of the website you want to scrape
         url = "https://guide.michelin.com/us/en/selection/united-states/restaurants/page/" + str(i)
 
-        # Send a GET request to the website
+    # Send a GET request to the website
 	# The code inside the 'try' block is executed
-	try: 
-    		response = requests.get(url)
-    		response.raise_for_status() 
-	except requests.exceptions.HTTPError as errh
-        	response = requests.get(url) 
+        try: 
+            response = requests.get(url)
+            response.raise_for_status() 
+        except requests.exceptions.HTTPError as errh:
+            response = requests.get(url) 
 
         # Parse the HTML content of the page
         soup = BeautifulSoup(response.text, 'html.parser')
